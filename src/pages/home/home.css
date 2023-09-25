@@ -1,0 +1,107 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 2em;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .hr {
+    width: 100%;
+    height: 1px;
+    background: #3e3b36;
+  }
+  
+  .reveal {
+    width: 500px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .reveal div {
+    position: absolute;
+    line-height: 1.8em;
+  }
+  
+  .h1 {
+    font-size: 6.4em;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  
+  .h1 span {
+    font-style: italic;
+  }
+  
+  .secondary {
+    font-family: "Neue Montreal";
+  }
+  
+  .p {
+    padding: 0.8em 0;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .white-space {
+    width: 100%;
+    height: 120px;
+  }
+  
+  .white-space2 {
+    width: 100%;
+    height: 90px;
+  }
+  
+  .nav-item {
+    width: 240px;
+    border-radius: 0 0 40px 0;
+    margin: 0.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .nav-item > div {
+    padding: 1em;
+    font-family: "Neue Montreal";
+    font-size: 14px;
+  }
+  
+  .about {
+    background: #626e56;
+    text-decoration: none;
+  }
+  
+  .projects {
+    background: #525E75;
+    text-decoration: none;
+  }
+  
+  .contact {
+    background: #6a6a6a;
+    text-decoration: none;
+  }
+  
+  .about > div {
+    color: white;
+  }
+  .projects > div{
+    color: white;
+  }
+  .contact > div{
+    color: white;
+  }
+  .id {
+    margin-right: 0.8em;
+  }
+  
+  .anchorTag:hover{
+    cursor: none;
+  }
