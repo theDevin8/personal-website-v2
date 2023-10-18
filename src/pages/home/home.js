@@ -150,8 +150,8 @@ const Home = () => {
             )}
 
             {isMobile && (
-                <div className={`App ${isMobile ? 'hide-cursor' : ''}`}> 
-
+                <div>
+                    <h1>hello devin</h1>
                 </div>
             )}
             
