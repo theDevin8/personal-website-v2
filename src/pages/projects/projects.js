@@ -45,8 +45,23 @@ const Projects = () => {
         );
 
     }, []);
+
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const width = window.innerWidth;
+            setIsMobile(width >= 320 && width <= 428);
+
+        };
+        window.addEventListener('resize', checkIsMobile);
+        checkIsMobile();
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        }
+    }, []);
+
     return (
-        <div>
+        <div className='project-page'>
             <div className='row'>
                 <div className='reveal'>
                     <div className='h1 primary'>DE<span>VI</span>N'S</div>
@@ -57,11 +72,13 @@ const Projects = () => {
             </div>
 
             <div class="hr"></div>
-            <div className='row intro'>
-                <div className='p'><a className='link' href="/">home</a></div>
-                <div className='p'><a className='link' href="/about">About</a></div>
-                <div className='p'><a className='link' href = "/contact">contact</a></div>
-            </div>
+            {!isMobile &&
+                <div className='row intro'>
+                    <div className='p'><a className='link' href="/">home</a></div>
+                    <div className='p'><a className='link' href="/about">About</a></div>
+                    <div className='p'><a className='link' href="/contact">contact</a></div>
+                </div>
+            }
 
             <div className='white-space2'></div>
 
@@ -75,7 +92,7 @@ const Projects = () => {
                                     <div className="projects-item-name">
                                         ConnectCS <span>Coming Soon</span>
                                     </div>
-                                    <div className='p'>ReactJS | NodeJS | JavaScript | CSS | MongoDB</div>
+                                    <div className='plang'>ReactJS | NodeJS | JavaScript | CSS | MongoDB</div>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +105,7 @@ const Projects = () => {
                                     <div className="projects-item-name">
                                         Personal Website V2 <span>September 2023</span>
                                     </div>
-                                    <div className='p'>ReactJS | JavaScript | CSS </div>
+                                    <div className='plang'>ReactJS | JavaScript | CSS </div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +118,7 @@ const Projects = () => {
                                     <div className="projects-item-name">
                                         Personal Website v1<span>May 2023</span>
                                     </div>
-                                    <div className='p'>ReactJS | JavaScript | CSS </div>
+                                    <div className='plang'>ReactJS | JavaScript | CSS </div>
                                 </div>
                             </div>
                         </Link>
@@ -114,7 +131,9 @@ const Projects = () => {
                                     <div className="projects-item-name">
                                         Theme Park Management System <span>April 2023</span>
                                     </div>
-                                    <div className='p'>ReactJS | NodeJS | JavaScript | CSS | MySQL</div>
+                                    <div className='langs'>
+                                        <p>ReactJS | NodeJS | JavaScript | CSS | MySQL/</p>
+                                    </div>
                                 </div>
                             </div>
                         </Link>
@@ -127,7 +146,7 @@ const Projects = () => {
                                     <div className="projects-item-name">
                                         Manipulation of an Expression<span>May 2023</span>
                                     </div>
-                                    <div className='p'>C++</div>
+                                    <div className='plang'>C++</div>
                                 </div>
                             </div>
                         </div>
@@ -139,22 +158,55 @@ const Projects = () => {
                                     <div className="projects-item-name">
                                         Tamagochi Pet Game<span>May 2022</span>
                                     </div>
-                                    <div className='p'>C++</div>
+                                    <div className='plang'>C++</div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
+
             </div>
-            
-       
-            
 
-
-
+            {isMobile && (
+                <div className='reveal2'>
+                    <div className='project'>
+                        <div className='projects-item-name'>
+                            ConnectCS
+                        </div>
+                        <div className='plang'>ReactJS | NodeJS | JavaScript | CSS | MongoDB</div>
+                    </div>
+                    <div className='project'>
+                        <div className='projects-item-name'>
+                            Personal Website V2
+                        </div>
+                        <div className='plang'>ReactJS | JavaScript | CSS</div>
+                    </div>
+                    <div className='project'>
+                        <div className='projects-item-name'>
+                            Personal Website V1
+                        </div>
+                        <div className='plang'>ReactJS | JavaScript | CSS</div>
+                    </div>
+                    <div className='project'>
+                        <div className='projects-item-name'>
+                            Theme Park Management System
+                        </div>
+                        <div className='plang'>ReactJS | NodeJS | JavaScript | CSS | MongoDB</div>
+                    </div>
+                    <div className='project'>
+                        <div className='projects-item-name'>
+                            Manipulation of an Expression
+                        </div>
+                        <div className='plang'>C++</div>
+                    </div>
+                    <div className='project'>
+                        <div className='projects-item-name'>
+                            Tamagochi Pet Game
+                        </div>
+                        <div className='plang'>C++</div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

@@ -4,7 +4,20 @@ import gsap from 'gsap';
 import image01 from '../../images/01image.jpg';
 
 const About = () => {
-    const [shouldReveal, setShouldReveal] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const width = window.innerWidth;
+            setIsMobile(width >= 320 && width <= 428);
+        };
+
+        window.addEventListener('resize', checkIsMobile);
+        checkIsMobile();
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
+
     useEffect(() => {
         const tl = gsap.timeline();
 
@@ -48,7 +61,8 @@ const About = () => {
     }, []);
 
     return (
-        <div>
+        <div className='about-page'>
+
             <div className='row'>
                 <div className='reveal'>
                     <div className='h1 primary'>A<span>bo</span>ut</div>
@@ -56,21 +70,22 @@ const About = () => {
                 <div className='reveal'>
                     <div className='h1 primary'>De<span>vin</span></div>
                 </div>
-                
+
             </div>
 
             <div class="hr"></div>
-            <div className='row intro'>
+            {!isMobile && <div className='row intro'>
                 <div className='p'><a className='link' href="/">home</a></div>
                 <div className='p'><a className='link' href="/projects">projects</a></div>
                 <div className='p'><a className='link' href='/contact'>contact</a></div>
-            </div>
+            </div> }
+            
 
             <div className='white-space'></div>
 
             <div className="reveal2">
                 <div class="items">
-                    <div class="item" id="item-1">
+                    <div class={isMobile ? "item-mobile" : "item"} id="item-1">
                         <div class="item-img">
                             <img src={image01} alt='devinstockton.jpg' />
                         </div>
@@ -89,7 +104,7 @@ const About = () => {
                                         <span className='img-text'>Portrait</span>
                                     </div>
                                     <div class="text-right">
-                                        <span className='img-text'>Showcasing <br />Devin Stockton.</span>
+                                        <span className='img-text'>Click to view  <br />Devin Stockton.</span>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +112,7 @@ const About = () => {
                     </div>
 
                     <div>
-                        <h1>Devin Stockton.</h1>
+                        <h1 className='about-title'>Devin Stockton.</h1>
                         <a className='link' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a>
                         <a className='link' href="https://github.com/theDevin8">GitHub</a>
                         <a className='link'>Resume</a>
@@ -107,56 +122,58 @@ const About = () => {
                             I am currently a junior majoring in Computer Science with a minor in Chemical Enginering @ University of Houston.
                         </div>
                     </div>
-
-                   
-                    <div className='line'></div>
+                    {isMobile && <h1 className='about-title'>Experience</h1>}
                     <div className='work'>
                         <div className='description-work'>
-                            <span>May 2024- August 2024 <br/></span>
+                            <span>May 2024- August 2024 <br /></span>
                             <h3>Software Engineering Intern @ Slack <br /></h3>
                             <span>Soon to Intern as a Software Engineer at Slack.</span>
                         </div>
                         <div className='white-space3'></div>
 
                         <div className='description-work'>
-                            <span>September 2023 - Present <br/></span>
+                            <span>September 2023 - Present <br /></span>
                             <h3>Student Worker @ Univeristy of Houston <br /></h3>
                             <span>Currently a student worker at the College of Technology, University of Houston.</span>
                         </div>
                         <div className='white-space3'></div>
 
                         <div className='description-work'>
-                            <span>August 2023 - Present <br/></span>
+                            <span>August 2023 - Present <br /></span>
                             <h3>Founder/SWE of ConnectCS<br /></h3>
                             <span>Currently working on a startup company that aims to develop an application for CS students.</span>
                         </div>
                         <div className='white-space3'></div>
 
                         <div className='description-work'>
-                            <span>July 2023 <br/></span>
+                            <span>July 2023 <br /></span>
                             <h3>Connectrix Advisor @ Rice University <br /></h3>
                             <span>Advised upcoming high school students on personal and academic growth.</span>
                         </div>
                         <div className='white-space3'></div>
 
                         <div className='description-work'>
-                            <span>May 2023- August 2023 <br/></span>
+                            <span>May 2023- August 2023 <br /></span>
                             <h3>Software Engineering Intern @ LootSwap <br /></h3>
                             <span>Interned as a Software Engineer at LootSwap.</span>
                         </div>
                         <div className='white-space3'></div>
 
                         <div className='description-work'>
-                            <span>January 2023- August 2023 <br/></span>
+                            <span>January 2023- August 2023 <br /></span>
                             <h3>CS Tutor @ CougarCS<br /></h3>
                             <span>Served as a programming instructor/mentor at CougarCS.</span>
                         </div>
+                        <div className='white-space3'></div>
+
                     </div>
-                    
                 </div>
-
-
             </div>
+
+
+
+
+
         </div>
     )
 }

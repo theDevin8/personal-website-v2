@@ -1,3 +1,64 @@
-.hide-cursor {
-    cursor: none;
-  }
+
+  @media (max-width: 428px) {
+    .header-space{
+      margin-top: 2em;
+    }
+    .p{
+      font-size: 4vw;
+    }
+    .row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .reveal {
+      width: 100%;
+      text-align: center;
+      height: 70px;
+    }
+    .h1 {
+      font-size: 10vw;
+      font-weight: 400;
+      
+    }
+    .white-space{
+      height: 30px;
+    }
+    .white-space2{
+      height: 30px;
+    }
+    body {
+      padding: 5rem;
+    }
+    .items {
+      flex-direction: column;
+    }
+    .item-mobile{
+      width: 220px;
+      height: 220px;
+      border-radius: 5em;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: none;
+    }
+    .item-mobile:hover img {
+      transform: scale(1.5);
+      filter: grayscale(0.5) sepia(0.75) brightness(0.75);
+    }
+    .project{
+      width: 100%;
+    }
+
+    .projects-item-copy {
+      padding: 4em 2em 4em 2em;
+    }
+  
+    .projects-item-name {
+      font-size: 24px;
+    }
+  
+    .projects-item-name span {
+      font-size: 16px;
+    }
+}
+  

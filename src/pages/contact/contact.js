@@ -85,7 +85,7 @@ const Contact = () => {
     };
 
     return (
-        <div>
+        <div className='contact-page'>
             <form onSubmit={handleSubmit}>
             <div className='row'>
                 <div className='reveal'>
