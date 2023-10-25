@@ -45,8 +45,48 @@ const Contact = () => {
         );
 
     }, []);
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                // Email sent successfully, you can show a success message to the user
+                console.log('Email sent successfully');
+            } else {
+                // Handle the error, show an error message to the user
+                console.error('Email sending failed');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    };
+
     return (
         <div>
+            <form onSubmit={handleSubmit}>
             <div className='row'>
                 <div className='reveal'>
                     <div className='h1 primary'>Co<span>nta</span>ct</div>
@@ -94,11 +134,11 @@ const Contact = () => {
                         <div className="contact-form col">
                             <div className="contact-wrapper">
                                 <div className="contact-row">
-                                    <input type="text" placeholder="Name" />
+                                    <input type="text" placeholder="Name" name ="name" value={formData.name} onChange={handleChange}/>
                                     
                                 </div>
                                 <div className="contact-row">
-                                    <input type="text" placeholder="Email" />
+                                    <input type="text" placeholder="Email" name="email" value={formData.email} onChange={handleChange}/>
                                 </div>
                                 <div className="contact-row">
                                     <textarea
@@ -106,10 +146,13 @@ const Contact = () => {
                                         placeholder="Message"
                                         rows="5"
                                         id="message"
+                                        name = "message"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                     ></textarea>
                                 </div>
                                 <div className="contact-row submit">
-                                    <a href="#">Submit</a>
+                                    <button type='submit'>Submit</button>
                                     <div className="contact-send-icon">
                                         <ion-icon
                                             name="arrow-forward-sharp"
@@ -124,6 +167,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     )
 }

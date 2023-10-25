@@ -8,6 +8,7 @@
     width: 100%;
     height: 50vh;
     display: flex;
+    justify-content: center;
   }
   
   .projects-divider {
@@ -45,7 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 8em 2em 8em 2em;
+    padding: 6em 2em 6em 2em;
     font-family: "Mitera";
     text-transform: uppercase;
     line-height: 60px;
@@ -67,6 +68,20 @@
   
   .projects-item-wrapper:hover .projects-item-copy {
     color: #fff;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .projects-item-copy {
+      padding: 4em 2em 4em 2em;
+    }
+  
+    .projects-item-name {
+      font-size: 24px;
+    }
+  
+    .projects-item-name span {
+      font-size: 16px;
+    }
   }
 
   

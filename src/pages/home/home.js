@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import './home.css';
-import '../../moblie.css'
+import '../../mobile.css'
 
 const Home = () => {
     useEffect(() => {
@@ -151,7 +151,7 @@ const Home = () => {
 
             {isMobile && (
                 <div>
-                    <h1>hello devin</h1>
+                    <h1>This should be the home mobile view</h1>
                 </div>
             )}
             
