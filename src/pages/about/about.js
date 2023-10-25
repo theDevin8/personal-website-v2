@@ -66,7 +66,7 @@ const About = () => {
                 <div className='p'><a className='link' href='/contact'>contact</a></div>
             </div>
 
-            <div className='white-space'></div>
+            <div className='white-space2'></div>
 
             <div className="reveal2">
                 <div class="items">

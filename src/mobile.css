@@ -1,3 +1,18 @@
 .hide-cursor {
     cursor: none;
   }
+
+  @media only screen and (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Adjusts the direction to column when the screen is small */
+      align-items: center; /* Centers the items vertically when in column direction */
+      padding: 10px; /* Adjust the padding for smaller screens */
+    }
+    .projects-item-copy {
+      padding: 4em 2em 4em 2em;
+    }
+    .projects-item-name {
+      font-size: 20px;
+    }
+    
+  }

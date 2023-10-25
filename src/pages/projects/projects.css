@@ -70,18 +70,5 @@
     color: #fff;
   }
 
-  @media only screen and (max-width: 768px) {
-    .projects-item-copy {
-      padding: 4em 2em 4em 2em;
-    }
-  
-    .projects-item-name {
-      font-size: 24px;
-    }
-  
-    .projects-item-name span {
-      font-size: 16px;
-    }
-  }
 
   

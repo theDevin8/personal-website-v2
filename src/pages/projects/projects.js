@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import './projects.css';
+import '../../mobile.css';
 import { Link } from 'react-router-dom';
 const Projects = () => {
     const [shouldReveal, setShouldReveal] = useState(false);

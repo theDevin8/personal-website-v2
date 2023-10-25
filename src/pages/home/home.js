@@ -130,7 +130,7 @@ const Home = () => {
                         <div className='p'> <a className='anchorTag' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a></div>
                         <div className='p'>Email</div>
                     </div>
-                    <div className='white-space2'></div>
+                   
                     <div className='row'>
                         <div className='reveal'>
                             <div className='h1 secondary'>Tech</div>
