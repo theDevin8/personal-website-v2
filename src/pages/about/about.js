@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
 import './about.css';
 import gsap from 'gsap';
 import image01 from '../../images/01image.jpg';
@@ -113,7 +112,7 @@ const About = () => {
                         <h1 className='about-title'>Devin Stockton.</h1>
                         <a className='link' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a>
                         <a className='link' href="https://github.com/theDevin8">GitHub</a>
-                        <a className='link'>Resume</a>
+                        <div className='link'>Resume</div>
                         <div className='white-space3'></div>
                         <div className='description'>
                             My name is Devin Stockton, and I'm a upcoming Software Engineering Intern @ Slack.

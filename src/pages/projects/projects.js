@@ -4,7 +4,6 @@ import './projects.css';
 import '../../mobile.css';
 import { Link } from 'react-router-dom';
 const Projects = () => {
-    const [shouldReveal, setShouldReveal] = useState(false);
     useEffect(() => {
         const tl = gsap.timeline();
 

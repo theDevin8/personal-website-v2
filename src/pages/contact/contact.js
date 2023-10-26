@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import emailjs, { sendForm } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import gsap from 'gsap';
 import './contact.css';
 

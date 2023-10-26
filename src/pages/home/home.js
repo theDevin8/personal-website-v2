@@ -95,7 +95,7 @@ const Home = () => {
                         <div className='row intro'>
                             <div className='p'>Undergraduate Software Engineer</div>
                             <div className='p'>CS @University of Houston</div>
-                            <div className='p'><a className='anchorTag'>Resume</a></div>
+                            <div className='p'>Resume</div>
                             <div className='p'>Houston, Texas</div>
                         </div>
 
