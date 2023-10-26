@@ -62,98 +62,102 @@ const Home = () => {
 
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
-      const checkIsMobile = () => {
-        const width = window.innerWidth;
-        setIsMobile(width >= 320 && width <= 428);
-        
-      };
-      window.addEventListener('resize', checkIsMobile);
-      checkIsMobile();
-      return () => {
-        window.removeEventListener('resize', checkIsMobile);
-      }
+        const checkIsMobile = () => {
+            const width = window.innerWidth;
+            setIsMobile(width >= 320 && width <= 428);
+
+        };
+        window.addEventListener('resize', checkIsMobile);
+        checkIsMobile();
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        }
     }, []);
-  
+
     return (
         <div>
-            {!isMobile && (
-                <div className='container'>
-                    <div className='row'>
-                        <div className='reveal'>
-                            <div className='h1 primary'>De<span>vin</span></div>
-                        </div>
-                        <div className='reveal'>
-                            <div className='h1 primary'>S<span>t</span><span>oc</span><span>kt</span>on</div>
-                        </div>
-                    </div>
-
-                    <div class="hr"></div>
-                    <div className='row intro'>
-                        <div className='p'>Undergraduate Software Engineer</div>
-                        <div className='p'>CS @University of Houston</div>
-                        <div className='p'><a className='anchorTag'>Resume</a></div>
-                        <div className='p'>Houston, Texas</div>
-                    </div>
-
-                    <div className='white-space'></div>
-                    <div className='row'>
-                        <Link className='nav-item about' to="/about">
-                            <div>About</div>
-                            <div className='id'>01</div>
-                        </Link>
-
-                        <div className='reveal'>
-                            <div className='h1 secondary'>Programmer</div>
-                        </div>
-
-                        <Link className='nav-item projects' to='/projects'>
-                            <div>Projects</div>
-                            <div className='id'>02</div>
-                        </Link>
-                    </div>
-
-                    <div className='hr'></div>
-
-                    <div className='row'>
-                        <div className='reveal'>
-                            <div className='h1 secondary'>Software</div>
-                        </div>
-
-                        <div className='reveal'>
-                            <div className='h1 secondary'>Engineer &nbsp;&nbsp;</div>
-                        </div>
-                    </div>
-
-                    <div className='hr'></div>
-                    <div className='row intro'>
-                        <div className='p'><a className='anchorTag' href="https://github.com/theDevin8">GitHub</a></div>
-                        <div className='p'> <a className='anchorTag' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a></div>
-                        <div className='p'>Email</div>
-                    </div>
-                   
-                    <div className='row'>
-                        <div className='reveal'>
-                            <div className='h1 secondary'>Tech</div>
-                        </div>
-
-                        <Link className='nav-item contact' to='/contact'>
-                            <div>Contact</div>
-                            <div className='id'>03</div>
-                        </Link>
-                        <div className='reveal'>
-                            <div className='h1 secondary'>Enthusiast</div>
-                        </div>
-                    </div>
-
-                    <div className='hr'></div>
-                </div>
-            )}
-
-            {isMobile && (
+        
                 <div>
-                    <h1>This should be the home mobile view</h1>
+                    {isMobile && 
+                    <div className='header-space'> </div>}
+                    
+                    <div className='container'>
+                        <div className='row'>
+                            <div className='reveal'>
+                                <div className='h1 primary'>De<span>vin</span></div>
+                            </div>
+                            <div className='reveal'>
+                                <div className='h1 primary'>S<span>t</span><span>oc</span><span>kt</span>on</div>
+                            </div>
+                        </div>
+
+                        <div class="hr"></div>
+                        <div className='row intro'>
+                            <div className='p'>Undergraduate Software Engineer</div>
+                            <div className='p'>CS @University of Houston</div>
+                            <div className='p'><a className='anchorTag'>Resume</a></div>
+                            <div className='p'>Houston, Texas</div>
+                        </div>
+
+                        <div className='white-space'></div>
+                        
+                            {!isMobile && 
+                            <div> <div className='row'><Link className='nav-item about' to="/about">
+                                <div>About</div>
+                                <div className='id'>01</div>
+                            </Link>
+                            <div className='reveal'>
+                                <div className='h1 secondary'>Programmer</div>
+                            </div>
+                            <Link className='nav-item projects' to='/projects'>
+                                <div>Projects</div>
+                                <div className='id'>02</div>
+                            </Link>
+                            </div> </div>}
+                            
+                            
+                    
+                       
+                        
+                        {!isMobile &&
+                        <div className='hr'></div>}
+                        
+                        <div className='row'>
+                            <div className='reveal'>
+                                <div className='h1 secondary'>Software</div>
+                            </div>
+
+                            <div className='reveal'>
+                                <div className='h1 secondary'>Engineer &nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+
+                        <div className='hr'></div>
+                        <div className='row intro'>
+                            <div className='p'><a className='anchorTag' href="https://github.com/theDevin8">GitHub</a></div>
+                            <div className='p'> <a className='anchorTag' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a></div>
+                            <div className='p'>Email</div>
+                        </div>
+                        {!isMobile && 
+                        <div> 
+                        <div className='white-space2'></div>
+                        <div className='row'>
+                            <div className='reveal'>
+                                <div className='h1 secondary'>Tech</div>
+                            </div>
+
+                            <Link className='nav-item contact' to='/contact'>
+                                <div>Contact</div>
+                                <div className='id'>03</div>
+                            </Link>
+                            <div className='reveal'>
+                                <div className='h1 secondary'>Enthusiast</div>
+                            </div>
+                        </div>
+
+                        <div className='hr'></div> </div>}
+                    </div>
                 </div>
-            )}
             
         </div>
     )

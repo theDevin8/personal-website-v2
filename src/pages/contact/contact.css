@@ -1,4 +1,7 @@
-
+  .contact-page{
+    height: 40em;
+    
+  }
   .contact-col {
     width: 50%;
     padding: 1em 3em;
@@ -68,7 +71,7 @@
     resize: vertical;
   }
   
-  
+
   @media (min-width: 900px) {
     body {
       height: 100%;
@@ -80,9 +83,4 @@
     }
   }
   
-  @media (max-width: 900px) {
-    .contact-col {
-      width: 100%;
-    }
-  }
   

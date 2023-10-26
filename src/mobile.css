@@ -1,18 +1,81 @@
-.hide-cursor {
-    cursor: none;
-  }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 428px) {
+    .container{
+      width: 25em;
+    }
+    .header-space{
+      margin-top: 2em;
+    }
+    .p{
+      font-size: 4vw;
+    }
     .row {
-      flex-direction: column; /* Adjusts the direction to column when the screen is small */
-      align-items: center; /* Centers the items vertically when in column direction */
-      padding: 10px; /* Adjust the padding for smaller screens */
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .projects-item-copy {
-      padding: 4em 2em 4em 2em;
+    .reveal {
+      width: 100%;
+      text-align: center;
+      height: 70px;
     }
-    .projects-item-name {
-      font-size: 20px;
+    .h1 {
+      font-size: 10vw;
+      font-weight: 400;
+      
+    }
+    .white-space{
+      height: 30px;
+    }
+    .white-space2{
+      height: 30px;
+    }
+    body {
+      padding: 5rem;
+    }
+    .items {
+      flex-direction: column;
+    }
+    .item-mobile{
+      width: 220px;
+      height: 220px;
+      border-radius: 5em;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: none;
+    }
+    .item-mobile:hover img {
+      transform: scale(1.5);
+      filter: grayscale(0.5) sepia(0.75) brightness(0.75);
+    }
+    .click-view{
+      font-size: .8em;
+    }
+    .project-page{
+      width: 25em;
+    }
+    .project{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #ead6b5;
+      height: 4em;
+      margin: 1em;
+      border-radius: 1em;
+    }
+    .langs{
+      flex-wrap: nowrap;
+      font-size: 10px;
+    }
+
+    /*contact mobile css */
+    .contact-page{
+      width: 25em;
+    }
+    textarea#message{
+      height: 3em;
     }
     
-  }
+}
+  

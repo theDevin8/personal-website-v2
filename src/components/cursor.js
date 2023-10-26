@@ -16,14 +16,34 @@ const Cursor = () => {
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const width = window.innerWidth;
+            setIsMobile(width >= 320 && width <= 428);
+        };
+
+        window.addEventListener('resize', checkIsMobile);
+        checkIsMobile();
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
+
   return (
-    <div
-      className="custom-cursor"
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-      }}
-    ></div>
+    <div>
+      {!isMobile && (
+        <div
+        className="custom-cursor"
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      ></div>
+      )}
+      
+    </div>
+   
   );
 };
 

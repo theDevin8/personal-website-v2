@@ -1,4 +1,7 @@
 
+.about-page{
+  height: 40em;
+}
 .link{
     cursor: none;
     margin-right: 3em;
@@ -10,15 +13,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-  }
-  
-  @media (max-width: 900px) {
-    body {
-      padding: 5rem 0;
-    }
-    .items {
-      flex-direction: column;
-    }
   }
 
   .item {
@@ -41,6 +35,7 @@
     object-fit: cover;
     filter: grayscale(0) sepia(0) brightness(1);
     transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 20%;
   }
   
   .item-copy {
@@ -125,7 +120,7 @@
   }
   .reveal2{
         animation-name: revealFromBottom;
-        animation-duration: 1.4s;
+        animation-duration: 3.2s;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
         opacity: 0;
@@ -141,19 +136,18 @@
       transform: translateY(0);
     }
   }
-  
-  .line{
-    height: 27em;
-    width: 3px; /* Adjust the width of the vertical line as needed */
-    background-color: #333; /* Change the line color */
-    margin-right: 20px;
-    border-radius: 1em;
-  }
+.work{
+  margin-left: 3em;
+}
 .description-work{
     margin-left: -2em;
+    transition: transform 0.3s ease-in-out;
 }
 .description-work:hover{
-    background-color: #dfdbd5;
+    background-color: #f0dfc2;
+    transform: scale(1.05);
+    border-radius: 1em;
+    
 }
 .img-text{
     color: white;
