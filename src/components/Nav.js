@@ -92,13 +92,12 @@ const Nav = () => {
                 transitionDelay: navOpen ? "1.2s" : "0s",
               }}
             >
-              <span>Toronto, ON</span>
             </div>
             <div className="nav-social-media">
               <ul>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/devin-stockton-25846a252/"
                     style={{
                       bottom: navOpen ? "0" : "-20px",
                       opacity: navOpen ? "1" : "0",
@@ -110,7 +109,7 @@ const Nav = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/devinnnxx/"
                     style={{
                       bottom: navOpen ? "0" : "-20px",
                       opacity: navOpen ? "1" : "0",

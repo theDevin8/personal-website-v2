@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "PP Editorial New";
-  color: #201e1a;
+  color: #cac3b5;
 }
 
 body {
   width: 100%;
   height: 100vh;
-  background: #FFF2D8;
+  background: #071104;
   display: flex;
   justify-content: center;
   align-items: center;

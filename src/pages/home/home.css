@@ -12,7 +12,7 @@
   
   .hr {
     width: 100%;
-    height: 1px;
+    height: 1.5px;
     background: #3e3b36;
   }
   
@@ -72,17 +72,17 @@
   }
   
   .about {
-    background: #626e56;
+    background: #252d1c;
     text-decoration: none;
   }
   
   .projects {
-    background: #525E75;
+    background: #3a404b;
     text-decoration: none;
   }
   
   .contact {
-    background: #6a6a6a;
+    background: #4d4d4d;
     text-decoration: none;
   }
   

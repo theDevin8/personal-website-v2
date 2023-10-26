@@ -136,11 +136,11 @@ const Home = () => {
                         <div className='row intro'>
                             <div className='p'><a className='anchorTag' href="https://github.com/theDevin8">GitHub</a></div>
                             <div className='p'> <a className='anchorTag' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a></div>
-                            <div className='p'>Email</div>
+                            <div className='p'><a className = 'anchorTag' href="mailto:devinstockton2003@gmail.com">Email</a></div>
                         </div>
                         {!isMobile && 
                         <div> 
-                        <div className='white-space2'></div>
+                        
                         <div className='row'>
                             <div className='reveal'>
                                 <div className='h1 secondary'>Tech</div>

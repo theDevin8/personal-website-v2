@@ -25,8 +25,8 @@
     padding-top: 0.8em;
   }
   .contact-social-media {
-   
-    height: 100px;
+    height: 80px;
+    border: none;
   }
   .contact-item {
     padding: 4em 0 0 0;
@@ -35,9 +35,12 @@
   .contact-info {
     display: flex;
   }
-  
+  .contact-email{
+    border: none;
+  }
   .contact-address {
     padding-left: 4em;
+    border: none;
   }
   
   input {
@@ -48,7 +51,7 @@
     font-size: 24px;
     padding: 0.4em;
     width: 100%;
-    color: #3d3d3d;
+    color: #b4b4b4;
     margin-right: 0.4em;
   }
   
@@ -69,6 +72,20 @@
     color:#3d3d3d;
     font-family: "Neue Montreal";
     resize: vertical;
+  }
+
+  .send-button{
+    display: inline-block;
+    border: 2px solid #58513a;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  .send-button:hover{
+    background-color: #b3a182;
+    color:rgb(255, 255, 255);
   }
   
 

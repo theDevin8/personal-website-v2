@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs, { sendForm } from '@emailjs/browser';
 import gsap from 'gsap';
 import './contact.css';
-import { response } from 'express';
 
 
 const Contact = () => {
@@ -62,7 +61,18 @@ const Contact = () => {
         };
     }, []);
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_PUBLIC_KEY)
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
 
+          e.target.reset();
+      };
     return (
         <div className='contact-page'>
 
@@ -109,7 +119,7 @@ const Contact = () => {
                                 </div>}
                         </div>
                         {/*space*/}
-                        <form className='form' >
+                        <form onSubmit={sendEmail}>
                             <div className="contact-form col">
                                 <div className="contact-wrapper">
                                     <div className="contact-row">
@@ -130,11 +140,8 @@ const Contact = () => {
                                         ></textarea>
                                     </div>
                                     <div className="contact-row submit">
-                                        <button type='submit'>Submit
+                                        <button className='send-button' type='submit'>
                                             <span class="default">Send</span>
-                                            <span class="success">Sent</span>
-                                            <div class="left"></div>
-                                            <div class="right"></div>
                                         </button>
 
                                     </div>
@@ -145,6 +152,8 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+
+           
 
         </div>
     )

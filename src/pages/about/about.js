@@ -80,10 +80,7 @@ const About = () => {
                 <div className='p'><a className='link' href="/projects">projects</a></div>
                 <div className='p'><a className='link' href='/contact'>contact</a></div>
             </div> }
-            
-
-            <div className='white-space2'></div>
-
+            {isMobile && <div className='white-space2'></div>}
             <div className="reveal2">
                 <div class="items">
                     <div class={isMobile ? "item-mobile" : "item"} id="item-1">
@@ -111,7 +108,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    {isMobile && <span className='click-view'>tap on image to explore...</span>}
+                    
                     <div>
                         <h1 className='about-title'>Devin Stockton.</h1>
                         <a className='link' href="https://www.linkedin.com/in/devin-stockton-25846a252/">LinkedIn</a>

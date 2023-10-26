@@ -91,41 +91,41 @@ const Projects = () => {
                         <span>COMING SOON</span>
                         <span className='langs'>ReactJS | NodeJS | JavaScript | CSS | MongoDB</span>
                     </div>
-                    <div className='project'>
+                    <Link className='project' to= "https://github.com/theDevin8/personal-website-v2"> 
                         <div className='projects-item-name'>
                             <span>Personal Website V2</span>
                         </div>
                         <span>SEPTEMBER 2023</span>
                         <div className='langs'>ReactJS | JavaScript | CSS</div>
-                    </div>
-                    <div className='project'>
+                    </Link>
+                    <Link className='project' to = "https://github.com/theDevin8/portfolio">
                         <div className='projects-item-name'>
                             <span>Personal Website V1</span>
                         </div>
                         <span>MAY 2023</span>
                         <div className='langs'>ReactJS | JavaScript | CSS</div>
-                    </div>
-                    <div className='project'>
+                    </Link>
+                    <Link className='project' to = "https://github.com/theDevin8/Amusment_Frontend">
                         <div className='projects-item-name'>
                             <span>Theme Park Management System</span>
                         </div>
                         <span>APRIL 2023</span>
                         <div className='langs'>ReactJS | NodeJS | JavaScript | CSS | MongoDB</div>
-                    </div>
-                    <div className='project'>
+                    </Link>
+                    <Link className='project' to = "https://github.com/theDevin8/Expression-Manipulation">
                         <div className='projects-item-name'>
                             <span>Manipulation of an Expression</span>
                         </div>
                         <span>NOVEMBER 2022</span>
                         <div className='langs'>C++</div>
-                    </div>
-                    <div className='project'>
+                    </Link>
+                    <Link className='project' to ="https://github.com/theDevin8/Tamagotchi-Game">
                         <div className='projects-item-name'>
                             <span>Tamagochi Pet Game</span>
                         </div>
                         <span>MAY 2022</span>
                         <div className='langs'>C++</div>
-                    </div>
+                    </Link>
                     </div>
                 </div>
             ) : (
@@ -145,7 +145,7 @@ const Projects = () => {
                         </div>
                         <div className="projects-divider"></div>
 
-                        <div className="projects-item">
+                        <Link className="projects-item" to = "https://github.com/theDevin8/personal-website-v2">
                             <div className="projects-item-wrapper">
                                 <div className="projects-img-overlay"></div>
                                 <div className="projects-item-copy">
@@ -155,7 +155,7 @@ const Projects = () => {
                                     <div className='plang'>ReactJS | JavaScript | CSS </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                         <div className="projects-divider"></div>
 
                         <Link className="projects-item" to="https://github.com/theDevin8/portfolio">
@@ -185,8 +185,8 @@ const Projects = () => {
                             </div>
                         </Link>
                         <div className="projects-divider"></div>
-
-                        <div className="projects-item">
+                        
+                        <Link className="projects-item" to= "https://github.com/theDevin8/Expression-Manipulation">
                             <div className="projects-item-wrapper">
                                 <div className="projects-img-overlay"></div>
                                 <div className="projects-item-copy">
@@ -196,9 +196,10 @@ const Projects = () => {
                                     <div className='plang'>C++</div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                         <div className='projects-divider'></div>
-                        <div className="projects-item">
+
+                        <Link className="projects-item" to = "https://github.com/theDevin8/Tamagotchi-Game">
                             <div className="projects-item-wrapper">
                                 <div className="projects-img-overlay"></div>
                                 <div className="projects-item-copy">
@@ -208,7 +209,7 @@ const Projects = () => {
                                     <div className='plang'>C++</div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
 
